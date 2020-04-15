@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { uuid } from 'uuidv4'
+import Transaction from '../models/Transaction'
 
 // import TransactionsRepository from '../repositories/TransactionsRepository';
 // import CreateTransactionService from '../services/CreateTransactionService';
@@ -8,7 +8,7 @@ const transactionRouter = Router()
 
 // const transactionsRepository = new TransactionsRepository();
 
-const transactions = []
+const transactions: Transaction[] = []
 
 transactionRouter.get('/', (request, response) => {
   try {
@@ -22,12 +22,7 @@ transactionRouter.post('/', (request, response) => {
   try {
     const { title, value, type } = request.body
 
-    const transaction = {
-      id: uuid(),
-      title,
-      value,
-      type,
-    }
+    const transaction = new Transaction({ title, value, type })
 
     transactions.push(transaction)
 
