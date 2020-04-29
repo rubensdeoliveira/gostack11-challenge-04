@@ -23,7 +23,7 @@ Gostack is immersive training in technologies, react and react natively.</p>
 
 - 💹 **Node Js** — A web framework for Node Js
 
-### Rotas da aplicação
+### Routes
 
 - **`POST /transactions`**
 
