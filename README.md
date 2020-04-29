@@ -1,23 +1,31 @@
 <img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
 
-<h3 align="center">
-  Desafio 04: Primeiro projeto Node.js
-</h3>
+<h1 align="center">
+<br>
+Rocketseat - GoStack 11 - Challenge 04
+</h1>
 
 <p align="center">
-  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+This project was created to solve a challenge requested by Rocketseat.
+Gostack is immersive training in technologies, react and react natively.</p>
+
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
 </p>
 
-## :rocket: Sobre o desafio
+<hr />
 
-Nesse desafio, você deve criar uma aplicação para continuar treinando o que você aprendeu até agora no Node.js junto ao TypeScript, utilizando o conceito de models, repositories e services!
+## Features
 
-Essa será uma aplicação para que deve armazenar transações financeiras de entrada e saída, que deve permitir o cadastro e a listagem dessas transações.
+- Features can be accessed by routes below.
+
+- 💹 **Node Js** — A web framework for Node Js
 
 ### Rotas da aplicação
 
-- **`POST /transactions`**: A rota deve receber `title`, `value` e `type` dentro do corpo da requisição, sendo `type` o tipo da transação, que deve ser `income` para entradas (depósitos) e `outcome` para saidas (retiradas). Ao cadastrar uma nova transação, ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
+- **`POST /transactions`**
 
 ```json
 {
@@ -28,7 +36,7 @@ Essa será uma aplicação para que deve armazenar transações financeiras de e
 }
 ```
 
-- **`GET /transactions`**: Essa rota deve retornar uma listagem com todas as transações que você cadastrou até agora, junto com o valor de soma de entradas, retiradas e total de crédito. Essa rota deve retornar um objeto com o formato a seguir:
+- **`GET /transactions`**
 
 ```json
 {
@@ -66,18 +74,24 @@ Essa será uma aplicação para que deve armazenar transações financeiras de e
 }
 ```
 
-### Específicação dos testes
+### Tests
 
-- **`should be able to create a new transaction`**: Para que esse teste passe, sua aplicação deve permitir que uma transação seja criada, e retorne um json com a transação criado.
+- **`should be able to create a new transaction`**
 
-- **`should be able to list the transactions`**: Para que esse teste passe, sua aplicação deve permitir que seja retornado um objeto contendo todas as transações junto ao balanço de income, outcome e total das transações que foram criadas até o momento.
+- **`should be able to list the transactions`**
 
-- **`should not be able to create outcome transaction without a valid balance`**: Para que esse teste passe, sua aplicação não deve permitir que uma transação do tipo `outcome` extrapole o valor total que o usuário tem em caixa, retornando uma resposta com código HTTP 400 e uma mensagem de erro no seguinte formato: `{ error: string }`
+- **`should not be able to create outcome transaction without a valid balance`**
 
-## :memo: Licença
+## Getting started
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+- Clone project > enter the project folder
+- run `yarn`
+- run `yarn dev:server`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
 
 ---
 
-Feito com 💜 by me
+Created with passion by me 👨🏻‍💻
